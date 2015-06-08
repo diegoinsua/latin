@@ -4,7 +4,7 @@
     <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
     <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
     <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
-    <property name="connection.connection_string">Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\diego\Desktop\RepoCMS\LatinCMS\App_Data\latinCMS.mdf;Integrated Security=True</property>
+    <property name="connection.connection_string">Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Usuario\Desktop\RepoCMS\LatinCMS\App_Data\latinCMS.mdf;Integrated Security=True</property>
 
     <property name="show_sql">true</property>
     <property name="hbm2ddl.keywords">auto-quote</property>

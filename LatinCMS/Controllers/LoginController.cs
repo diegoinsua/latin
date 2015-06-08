@@ -40,7 +40,7 @@ namespace LatinCMS.Controllers
                     return RedirectToAction("Index", "Home");
             }
 
-
+            ModelState.AddModelError("FalloLogin", "El usuario o la clave son incorrectos");
             return View(l);
             
 
