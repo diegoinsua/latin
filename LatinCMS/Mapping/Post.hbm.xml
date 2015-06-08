@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="LatinCMS" namespace="LatinCMS.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PostModel" table="Post" lazy="true" >
+    <id name="Id" column="id">
+      <generator class="identity" />
+    </id>
+    <property name="TipoPost">
+      <column name="tipoPost" sql-type="int" not-null="true" />
+    </property>
+    <property name="Usuario">
+      <column name="usuario" sql-type="bigint" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

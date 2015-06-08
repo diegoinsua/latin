@@ -1,0 +1,80 @@
+﻿#divPrincipal
+{
+    width: 1020px;
+    margin:auto;   /*centra al div*/  
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-center {
+    text-align:center;
+}
+
+.espaciadoVertical15
+{
+    margin-bottom: 15px;
+}
+
+.espaciadoVertical30
+{
+    margin-bottom: 30px;
+}
+
+.etiquetasEspaciado
+{
+    padding-top: 35px;
+}
+
+.tituloGris
+{
+    color:gray;
+}
+
+.etiquetaGris
+{
+    color:gray;
+    font-size: 12px;
+
+}
+
+.etiquetaNegra
+{
+    color:black;
+    font-size: 12px;
+
+}
+
+
+
+
+/* styles for validation helpers */
+.field-validation-error
+{
+color: #ff0000;
+}
+.field-validation-valid
+{
+display: none;
+}
+.input-validation-error
+{
+border: 1px solid #ffb7b7;
+background-color: #ffe7e7; 
+}
+.validation-summary-errors
+{
+/*font-weight: normal;
+color: #ff0000;*/
+}
+.validation-summary-valid
+{
+display: none;
+}

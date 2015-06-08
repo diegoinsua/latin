@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href=@Url.Content("~/Content/bootstrap.css") rel="stylesheet" type="text/css" />
+    <link href=@Url.Content("~/Content/Sitio.css") rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="divPrincipal">
+
+        <div class="float-left">
+            <a href="Home/index"><img src="~/Content/Imagenes/titulo.png" /></a> 
+        </div>
+
+        <br> <br> 
+
+        <div>
+            <hr noshade="noshade" style="color: lightgray"/>
+        </div>
+
+    
+
+        <section>
+           @RenderBody();
+        </section>
+
+    </div>
+
+    
+
+</body>
+</html>

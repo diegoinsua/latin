@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href=@Url.Content("~/Content/bootstrap.css") rel="stylesheet" type="text/css" />
+    <link href=@Url.Content("~/Content/Sitio.css") rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <br />
+    <br />
+    
+    <!-- Div Principal -->
+    <div style="width: 400px; margin:auto;">
+
+        <!-- Logo -->
+        @*<div class="float-center">
+            <a href="Home/index"><img src="~/Content/Imagenes/logo.png" /></a>
+        </div>*@
+
+
+        @*<br>
+        <br>*@
+
+
+        <!-- Linea -->
+        @*<div>
+            <hr noshade="noshade" style="color: lightgray" />
+
+        </div>*@
+
+
+
+
+        <section>
+            @RenderBody()
+        </section>
+    </div>
+</body>
+</html>

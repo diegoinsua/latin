@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Registración";
+    Layout = "~/Views/Shared/_LoyoutLogin.cshtml";
+}
+
+<!-- Entidad Usuario -->
+@model LatinCMS.Models.UsuarioModel
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+            
+   
+    <div class="form-group" style="width:380px; margin:auto;">
+
+        <!-- Muestro los errores encontrados -->
+        @Html.ValidationSummary("", new { @class = "altert alert-danger" })
+
+        <!-- Titulo -->
+        <h3 class="espaciadoVertical30"><b>Nueva cuenta</b></h3>
+
+        <!-- Formulario -->
+        <form class="form-group" action="Login/NuevaCuenta" method="POST">
+
+            <div class="espaciadoVertical15">
+                @Html.LabelFor(m => m.Nombre, new { @class = "etiquetaNegra" })
+                @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control" })
+            </div>
+            <div class="espaciadoVertical15">
+                @Html.LabelFor(m => m.Apellido, new { @class = "etiquetaNegra" })
+                @Html.TextBoxFor(m => m.Apellido, new { @class = "form-control" })
+            </div>
+            <div class="espaciadoVertical15">
+                @Html.LabelFor(m => m.Mail, new { @class = "etiquetaNegra" })
+                @Html.TextBoxFor(m => m.Mail, new { @class = "form-control" })
+            </div>
+
+            <div class="espaciadoVertical15">
+                @Html.LabelFor(m => m.Password, new { @class = "etiquetaNegra" })
+                @Html.TextBoxFor(m => m.Password, new { @type = "password", @class = "form-control" })
+            </div>
+
+            <div class="espaciadoVertical15">
+                @Html.LabelFor(m => m.repass, new { @class = "etiquetaNegra" })
+                @Html.TextBoxFor(m => m.repass, new { @type = "password", @class = "form-control" })
+            </div>
+
+            <input style="margin-top:40px" type="submit" class="btn btn-info btn-block" value="Register" />
+       </form>
+</div>
+}

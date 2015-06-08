@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_LoyoutLogin.cshtml";
+    ViewBag.Title = "Login";
+}
+   
+
+      <!-- Entidad Usuario -->
+      @model LatinCMS.Models.LoginModel
+       
+          
+        <div style="width:350px; margin:auto;">
+            <!-- Form -->
+            <form class="form-group" action="Login/Login" method="POST">
+                <h3><b>Login</b></h3>
+                <br>
+                <!-- TextBox Usuario -->
+                <div style="margin-bottom: 20px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    @Html.TextBoxFor(l => l.Mail, new { @class = "form-control", @id = "txtUsuario", @placeholder = "Dirección de Mail" })
+                </div>
+                <!-- TextBox Password -->
+                <div style="margin-bottom: 20px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    @Html.TextBoxFor(l => l.Password, new { @type="password", @class = "form-control", @id = "txtPassword", @placeholder = "Contraseña" })
+                </div>
+                <button class="btn btn-info btn-block " type="submit">Ingresar</button>
+
+                <div style="margin-top: 20px">
+                    <input type="checkbox" name="remember" value="no">
+                    <label style="vertical-align:2px" class="etiquetaGris" for="remember"> Recordarme</label>
+                </div>
+            </form>
+
+        </div>
+
+
+
+        <div style="text-align:right">
+            <!-- <i style="color:gray" class="glyphicon glyphicon-log-in"></i> -->
+            <a class="text-info" href="~/Login/NuevaCuenta">   Crear nueva cuenta...</a>
+
+        </div>
+  
