@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace LatinCMS.Controllers
 {
@@ -37,6 +38,37 @@ namespace LatinCMS.Controllers
             if (user != null && String.Equals(l.Mail, user.Mail) && String.Equals(l.Password, user.Password))
             {
                     Session["user"] = user;
+
+                FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket(
+                    1,
+                    "latincms",
+                    DateTime.Now,
+                    DateTime.Now.AddYears(100),
+                    true,
+                    "datosDeUsuario");
+
+                String encryptedTicket = System.Web.Security.FormsAuthentication.Encrypt(authTicket)
+
+                    HttpCookie authCookie = new HttpCookie(System.Web.Security.FormsAuthentication.FormsCookieName, encryptedTicket);
+
+                If (createPersistentCookie)
+                    authCookie.Expires = authTicket.Expiration;
+                
+
+                Response.Cookies.Add(authCookie);
+
+
+                    var authTicket = new FormsAuthenticationTicket(
+                       1,
+                       userName,
+                       DateTime.Now,
+                       DateTime.Now.AddMinutes(20), // expiry
+                       false,
+                       roles,
+                       "/");
+                    var cookie = new HttpCookie(FormsAuthentication.FormsCookieName,
+                      FormsAuthentication.Encrypt(authTicket));
+                    Response.Cookies.Add(cookie);
                     return RedirectToAction("Index", "Home");
             }
 
